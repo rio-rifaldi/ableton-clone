@@ -1,0 +1,28 @@
+---
+// Component Imports
+import About from "@/components/about.astro";
+import Container from "@/components/Container.astro";
+import Footer from "@/components/Footer.astro";
+import Navbar from "@/components/Navbar";
+import "@/styles/main.css";
+
+import "@fontsource-variable/josefin-sans";
+---
+
+<html lang="en" class="font-josefin">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Ableton Clone</title>
+	</head>
+
+	<body class="bg-slate-100">
+		<Navbar client:visible />
+		<Container>
+			<About />
+			<Footer />
+		</Container>
+	</body>
+</html>

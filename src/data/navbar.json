@@ -1,0 +1,98 @@
+{
+	"nav": [
+		{
+			"title": "live",
+			"href": "#"
+		},
+		{
+			"title": "push",
+			"href": "#"
+		},
+		{
+			"title": "note",
+			"href": "#"
+		},
+		{
+			"title": "link",
+			"href": "#"
+		},
+		{
+			"title": "shop",
+			"href": "#"
+		},
+		{
+			"title": "pack",
+			"href": "#"
+		},
+		{
+			"title": "help",
+			"href": "#"
+		}
+	],
+	"more": [
+		{
+			"title": "loop",
+			"href": "#",
+			"description": "Watch Talks, Performances and Features from Ableton's Summit for Music Makers"
+		},
+		{
+			"title": "Learning Music",
+			"href": "#",
+			"description": "Learn the fundamentals of music making right in your browser."
+		},
+		{
+			"title": "Learning Synths",
+			"href": "#",
+			"description": "Get started with synthesis using a web-based synth and accompanying lessons."
+		},
+		{
+			"title": "Making Music",
+			"href": "#",
+			"description": "Some tips from 74 Creative Strategies for Electronic Producers."
+		}
+	],
+	"moreLink": [
+		{
+			"href": "#",
+			"title": "Blog"
+		},
+		{
+			"href": "#",
+			"title": "ableton for the classroom"
+		},
+		{
+			"href": "#",
+			"title": "ableton for colleges and university"
+		},
+		{
+			"href": "#",
+			"title": "certified training"
+		},
+		{
+			"href": "#",
+			"title": "about ableton",
+			"additionalLink": [
+				{
+					"href": "#",
+					"title": "about"
+				},
+				{
+					"href": "#",
+					"title": "jobs"
+				},
+				{
+					"href": "#",
+					"title": "apprenticeships"
+				}
+			]
+		},
+		{
+			"href": "#",
+			"title": "jobs"
+		},
+		{
+			"href": "#",
+			"title": "apprenticeships"
+		}
+	]
+}

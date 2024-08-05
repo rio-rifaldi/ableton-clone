@@ -1,0 +1,111 @@
+---
+import {Image} from "astro:assets";
+
+import country from "@/data/country.json";
+import languages from "@/data/languages.json";
+import {arrowRight, facebook, instagram, logo, tiktok, X, youtube} from "./ImageEntry";
+---
+
+<footer class="mt-36">
+	<div class="h-[.10rem] w-full bg-slate-200"></div>
+	<p class="my-10 text-4xl font-semibold font-playfair">Ableton</p>
+
+	<div class="justify-between gap-10 sm:grid sm:grid-cols-2 lg:grid-cols-3">
+		<div>
+			<p class="font-semibold">Sign up to our newsletter</p>
+			<p class="mt-2 text-black/60">Enter your email address to stay up to date with the latest offers, tutorials, downloads, surveys and more.</p>
+
+			<form action="" class="flex items-center gap-1 my-5">
+				<input type="email" name="email" class="w-full px-6 py-2 rounded placeholder:capitalize bg-black/15 placeholder:text-black/35" placeholder="email address" />
+				<button class="flex-shrink-0 px-3 py-2 text-white rounded grow-0 bg-cyan-600 hover:bg-cyan-700 hover:duration-150">sign up</button>
+			</form>
+		</div>
+
+		<div class="flex flex-col gap-1 my-6 text-black/80">
+			<a href="" class="group hover:underline hover:underline-offset-2 hover:transition hover:text-black"
+				>Register Live or Push
+				<Image width={19} src={arrowRight} alt={"ArrowRight"} class="inline-block transition duration-300 ease-in-out fill-black/70 group-hover:translate-x-1" />
+			</a>
+			<a href="" class="group hover:underline hover:underline-offset-2 hover:transition hover:text-black"
+				>About Ableton
+				<Image width={19} src={arrowRight} alt={"ArrowRight"} class="inline-block transition duration-300 ease-in-out fill-black/70 group-hover:translate-x-1" />
+			</a>
+			<a href="" class="group hover:underline hover:underline-offset-2 hover:transition hover:text-black"
+				>Jobs
+				<Image width={19} src={arrowRight} alt={"ArrowRight"} class="inline-block transition duration-300 ease-in-out fill-black/70 group-hover:translate-x-1" />
+			</a>
+		</div>
+		<div id="for icon list" class="[&_img]:size-9 flex gap-4 my-8 justify-center sm:justify-start">
+			<a href="#" class="group">
+				<Image src={facebook} alt="facebook" class="transition duration-500 ease-in-out group-hover:-translate-y-1" />
+			</a>
+			<a href="#" class="group">
+				<Image src={X} alt="X" class="transition duration-500 ease-in-out group-hover:-translate-y-1 rounded-xl" />
+			</a>
+			<a href="#" class="group">
+				<Image src={youtube} alt="youtube" class="transition duration-500 ease-in-out group-hover:-translate-y-1" />
+			</a>
+			<a href="#" class="group">
+				<Image src={instagram} alt="instagram" class="transition duration-500 ease-in-out group-hover:-translate-y-1" />
+			</a>
+			<a href="#" class="group">
+				<Image src={tiktok} alt="tik tok" class="transition duration-500 ease-in-out group-hover:-translate-y-1" />
+			</a>
+		</div>
+
+		<div class="space-y-1">
+			<p class="my-2 font-semibold">Education</p>
+
+			<a href="" class="block transition group hover:underline hover:underline-offset-4 text-black/70"
+				>Offers for students and teachers <Image width={19} src={arrowRight} alt={"ArrowRight"} class="inline-block transition duration-300 ease-in-out fill-black/80 group-hover:translate-x-1" /></a
+			>
+			<a href="" class="block transition group hover:underline hover:underline-offset-4 text-black/70"
+				>Ableton for the Classroom <Image width={19} src={arrowRight} alt={"ArrowRight"} class="inline-block transition duration-300 ease-in-out fill-black/80 group-hover:translate-x-1" /></a
+			>
+			<a href="" class="block transition group hover:underline hover:underline-offset-4 text-black/70"
+				>Ableton for Colleges and Universities <Image width={19} src={arrowRight} alt={"ArrowRight"} class="inline-block transition duration-300 ease-in-out fill-black/80 group-hover:translate-x-1" /></a
+			>
+		</div>
+
+		<div class="my-10 space-y-1 sm:m-0">
+			<p class="my-2 font-semibold">Community</p>
+
+			<a href="" class="block transition group hover:underline hover:underline-offset-4 text-black/70"
+				>Find Ableton User Groups <Image width={19} src={arrowRight} alt={"ArrowRight"} class="inline-block transition duration-300 ease-in-out fill-black/80 group-hover:translate-x-1" /></a
+			>
+			<a href="" class="block transition group hover:underline hover:underline-offset-4 text-black/70"
+				>Find Certified Training <Image width={19} src={arrowRight} alt={"ArrowRight"} class="inline-block transition duration-300 ease-in-out fill-black/80 group-hover:translate-x-1" /></a
+			>
+			<a href="" class="block transition group hover:underline hover:underline-offset-4 text-black/70"
+				>Become a Certified Trainer <Image width={19} src={arrowRight} alt={"ArrowRight"} class="inline-block transition duration-300 ease-in-out fill-black/80 group-hover:translate-x-1" /></a
+			>
+		</div>
+
+		<div class="space-y-2">
+			<p class="my-2 font-semibold">Language and Location</p>
+			<select name="language" id="language" class="w-full px-3 py-2 rounded-md bg-black/10">
+				<option value="" selected disabled hidden class="">select your language</option>
+				{languages.map(({code, nativeName}) => <option value={code}>{nativeName}</option>)}
+			</select>
+			<select name="country" id="country" class="w-full px-3 py-2 rounded-md bg-black/10">
+				<option value="" selected disabled hidden class="">select your country</option>
+				{country.map(({code, name}) => <option value={code}>{name}</option>)}
+			</select>
+		</div>
+	</div>
+
+	<div class="mt-16 sm:flex sm:flex-row sm:justify-between sm:items-center">
+		<div class="flex flex-col gap-3 text-black/70 lg:flex-row lg:gap-5">
+			<a href="#" class="transition duration-300 hover:text-black hover:underline hover:ring-offset-4">Contact Us</a>
+			<a href="#" class="transition duration-300 hover:text-black hover:underline hover:ring-offset-4">Press Resources</a>
+			<a href="#" class="transition duration-300 hover:text-black hover:underline hover:ring-offset-4">Legal Info</a>
+			<a href="#" class="transition duration-300 hover:text-black hover:underline hover:ring-offset-4">Privacy Policy</a>
+			<a href="#" class="transition duration-300 hover:text-black hover:underline hover:ring-offset-4">Cookie Settings</a>
+			<a href="#" class="transition duration-300 hover:text-black hover:underline hover:ring-offset-4">Imprint</a>
+		</div>
+		<div class="flex items-center gap-3 md:m-0">
+			<Image src={logo} alt={"logo"} class="size-10" />
+			<p class="text-lg font-normal capitalize font-playfair">made by rio rifaldi</p>
+		</div>
+	</div>
+</footer>
