@@ -17,6 +17,7 @@ import image7 from "@/asset/ableton-7.png";
 import image8 from "@/asset/ableton-8.png";
 import image9 from "@/asset/ableton-9.png";
 import peopleWorking from "@/asset/people-working.png";
+import thumbnail1 from "@/asset/ableton-thubmnail-1.png";
 
 import tiktok from "@/asset/tiktokIcon.svg";
 import facebook from "@/asset/facebookIcon.svg";
@@ -54,4 +55,5 @@ export {
 	logo,
 	arrowRight,
 	profile,
+	thumbnail1,
 };
