@@ -4,6 +4,7 @@ import BoldText from "./BoldText.astro";
 import Text from "./Text.astro";
 import TextWrapper from "./TextWrapper.astro";
 import {image1, image2, image3, image4, image5, image6, image7, image8, image9, peopleWorking} from "./ImageEntry";
+import {YouTube} from "astro-embed";
 ---
 
 <section>
@@ -40,17 +41,7 @@ import {image1, image2, image3, image4, image5, image6, image7, image8, image9, 
 		<Text> We feel the same way about making Ableton products. The driving force behind Ableton is our passion for what we make, and the people we make it for. </Text>
 	</TextWrapper>
 
-	<figure class="flex flex-col items-center">
-		<iframe
-			class="w-full sm:w-[80%] rounded-md max-w-screen-lg mx-auto h-[50vw] xl:h-[40rem]"
-			src="https://www.youtube.com/embed/9SbnhgjeyXA?si=CuUl0mYKaLgyVRLT"
-			title="YouTube video player"
-			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-			referrerpolicy="strict-origin-when-cross-origin"
-			allowfullscreen></iframe>
-		<figcaption class="float-left mt-3">Why Ableton - Juanpe Bolivar</figcaption>
-	</figure>
-
+	<YouTube id="https://www.youtube.com/embed/9SbnhgjeyXA?si=CuUl0mYKaLgyVRLT" class="w-full sm:w-[80%] rounded-md max-w-screen-lg mx-auto h-[50vw] xl:h-[40rem]" />
 	<TextWrapper>
 		<BoldText> We are more than 350 people from 30 different countries divided between our headquarters in Berlin and our offices in Los Angeles and Tokyo. </BoldText>
 		<Text>

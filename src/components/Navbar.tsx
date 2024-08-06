@@ -2,11 +2,10 @@ import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from "@/co
 import {NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuList, NavigationMenuTrigger} from "@/components/ui/navigation-menu";
 import {Sheet, SheetContent, SheetTrigger} from "@/components/ui/sheet";
 import NavbarContent from "@/data/navbar.json";
+import ListItem from "./ListItem";
 
-import "@/styles/example.css";
 import {useEffect} from "react";
 import {twMerge} from "tailwind-merge";
-import ListItem from "./ListItem";
 import {Button} from "./ui/button";
 import {ScrollArea} from "./ui/scroll-area";
 import {Separator} from "./ui/separator";
@@ -145,7 +144,7 @@ export default function Navbar({}: Props) {
 	);
 }
 
-function Logo({className}: {className?: string}) {
+export function Logo({className}: {className?: string}) {
 	return (
 		<div className={twMerge("flex", className)}>
 			<img src={menu.src} alt="logo" className="rotate-90 size-14 " />
