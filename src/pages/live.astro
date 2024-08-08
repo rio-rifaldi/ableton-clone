@@ -1,0 +1,177 @@
+---
+import {header, image1, image2, image3, image4, image5, image6, thumbnail1, thumbnail2, thumbnail3, thumbnail4, thumbnail5} from "@/asset/live/Entry";
+import Container from "@/components/Container.astro";
+import BoldText from "@/components/reausable/BoldText.astro";
+import Text from "@/components/reausable/Text.astro";
+import TextWrapper from "@/components/reausable/TextWrapper.astro";
+import MainContentLayout from "@/layouts/MainContentLayout.astro";
+import {YouTube} from "astro-embed";
+import {Image} from "astro:assets";
+---
+
+<MainContentLayout noPaddingFull>
+	<div class="relative group" class="mb-7">
+		<div class="absolute left-0 right-0 lg:right-[10rem] m-auto font-semibold text-white capitalize w-fit top-[10%] px-10">
+			<p style="font-size:clamp(1.5rem, 0.6320rem + 3.9680vw, 3.1rem)" class="max-w-screen-lg">
+				find your <span class="text-black px-5 py-3 rounded-full bg-white normal-case">thing</span> again and again in ableton live
+			</p>
+			<button style="font-size:clamp(0.875rem, 0.5950rem + 1.2800vw, 1.175rem)" class="mt-5 bg-cus_blue py-2 px-3 rounded">
+				buy now <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="inline-block fill-cus_yellow underline group-hover:translate-x-1 duration-300"
+					><path d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z"></path></svg
+				>
+			</button>
+		</div>
+		<Image src={header} alt={"image hero"} class={"mx-auto w-full max-w-screen-2xl h-[70vh] object-cover "} format="webp" quality={"mid"} />
+	</div>
+
+	<Container>
+		<section class="my-20 max-w-screen-xl mx-auto space-y-9">
+			<BoldText className="lg:text-4xl"> Whatever music you make, and whoever you are as a music maker, there’s always more to explore in Live. See how you can go further with Live 12. </BoldText>
+
+			<YouTube poster={thumbnail1.src} posterQuality="low" id="https://youtu.be/QFCV6EkqRQs" title={"A look at some of the highlights of Live 12"} class={"mx-auto w-full max-w-screen-xl rounded-md "} />
+
+			<BoldText className="lg:text-4xl"> Find out what’s possible in Live 12 </BoldText>
+
+			<div class="space-x-3">
+				<p class="inline-block">jump to :</p>
+				<a href="#" class="text-cus_blue">Play freely with ideas</a>
+				<a href="#" class="text-cus_blue">Surprise yourself with sounds</a>
+				<a href="#" class="text-cus_blue">Work more intuitively</a>
+				<a href="#" class="text-cus_blue">See all new features</a>
+			</div>
+		</section>
+	</Container>
+
+	<Container className="bg-cus_avocado md:py-24 lg:px-32 space-y-14 md:space-y-32  ">
+		<BoldText className="lg:text-5xl"> Play freely with ideas Play video</BoldText>
+
+		<YouTube poster={thumbnail2.src} posterQuality="low" id="https://youtu.be/z7kjcMvMr3M" title={"A demonstration of the new MIDI Tools"} class={"mx-auto w-full max-w-screen-xl rounded-md "} />
+
+		<div class="space-y-7 md:flex md:space-y-0 gap-20 items-center">
+			<div class="space-y-3">
+				<BoldText> Reshape MIDI patterns </BoldText>
+				<Text>
+					Apply a variety of simple or complex variations to your MIDI clips with new MIDI Transformations. Add ornaments and articulations, draw acceleration and deceleration curves, connect successive
+					notes and chords, simulate the strum of a guitar, and more.
+				</Text>
+			</div>
+			<div class="space-y-3">
+				<BoldText> Generate inspiration</BoldText>
+				<Text>
+					Conjure up melodies, chords and rhythms with the help of new MIDI Generators. Set constraints and let your chosen Generator create playful and original ideas for you to develop and turn into your
+					own.
+				</Text>
+			</div>
+		</div>
+
+		<div class="space-y-5 md:flex md:space-y-0 md:items-center md:gap-20">
+			<Image src={image1} alt={"ableton music"} class={"md:w-1/2 rounded-md"} />
+
+			<div class="md:space-y-2 md:w-1/2">
+				<BoldText> Do more with Max for Live </BoldText>
+				<Text> Try out additional Max for Live Transformations and Generators that give you deeper ways of working with MIDI, or go even further by building new ones. </Text>
+			</div>
+		</div>
+
+		<div class="space-y-5 md:flex md:space-y-0 md:items-center md:justify-between md:flex-row-reverse md:gap-20">
+			<YouTube poster={thumbnail3.src} id="https://youtu.be/5-ZldZ5WhSM" posterQuality="low" class={"md:w-[70%] rounded-md"} title={"See how to work with tuning systems in Live"} />
+
+			<div class="md:space-y-3 md:w-[25%]">
+				<BoldText> Embrace and explore tunings </BoldText>
+				<Text>
+					Follow your preferred tuning systems or try different ones more easily. Work outside of 12-tone equal temperament, and use your tuning with Live’s devices as well as any MPE-capable plugin or
+					hardware.
+				</Text>
+			</div>
+		</div>
+		<div class="space-y-5 md:flex md:space-y-0 md:items-center md:justify-between md:gap-20">
+			<YouTube poster={thumbnail4.src} id="https://youtu.be/u6IpJYpN48A" posterQuality="low" class={"md:w-[60%] rounded-md"} title={"A quick look at the new Keys and Scales feature"} />
+
+			<div class="md:space-y-3 md:w-[40%]">
+				<BoldText> Stay in key </BoldText>
+				<Text> Transform or generate ideas within the confines of the selected scale, or sync the scale of MIDI devices and instruments to the clip being played.</Text>
+			</div>
+		</div>
+
+		<div class="space-y-5 md:flex md:space-y-0 md:items-center md:justify-center md:flex-row-reverse md:gap-20">
+			<Image src={image2} alt={"ableton music"} class={"rounded-md md:w-1/2"} />
+			<div class="md:space-y-3 md:w-1/2">
+				<BoldText>Edit MIDI more easily </BoldText>
+				<Text>
+					Use keyboard and mouse operations to edit MIDI in new ways. Split a note in two, or chop it into several parts. Select a set of notes and join them together, or make them fill a selected time
+					range. Plus, you can access to more tools from the Note Utilities panel on the left, such as Fit Scale, Humanize, Add Intervals, and more.</Text
+				>
+			</div>
+		</div>
+		<div class="space-y-5 md:flex md:space-y-0 md:items-center md:justify-center md:gap-20">
+			<Image src={image3} alt={"ableton music"} class={"rounded-md md:w-1/2"} />
+			<div class="md:space-y-3 md:w-1/2">
+				<BoldText>Modulate more flexibly </BoldText>
+				<Text>
+					Stay in control of a parameter, even after it’s been mapped to a modulation source; Max for Live devices like LFO, Shaper and Envelope Follower now let you freely adjust a destination that’s
+					being modulated.</Text
+				>
+			</div>
+		</div>
+	</Container>
+
+	<!-- Surprise yourself with the sounds you create  -->
+
+	<Container className="md:py-20 lg:px-32">
+		<BoldText className={"md:text-5xl lg:text-6xl"}> Surprise yourself with the sounds you create </BoldText>
+
+		<div class="space-y-5 md:flex md:space-y-0 md:items-center md:justify-between md:flex-row-reverse md:gap-20 mt-14 lg:mt-24">
+			<YouTube poster={thumbnail5.src} id="https://youtu.be/ncdNTdzBK4Y" posterQuality="low" class={"md:w-[60%] rounded-md"} title={"Take a look at the new devices in Live 12"} />
+
+			<div class="md:space-y-3 md:w-[40%]">
+				<BoldText> Find inspirations </BoldText>
+				<Text> Start playing with any of Live’s new instruments and effects and you’ll soon find new textures and techniques to spark further experimentation. </Text>
+			</div>
+		</div>
+
+		<div class="space-y-14">
+			<TextWrapper>
+				<BoldText> Lose yourself in Meld </BoldText>
+				<Text>
+					Live’s new MPE-capable synthesizer is designed for sound variety, playfulness and character. Equipped with two independent oscillators and an extensive modulation matrix, Meld excels at textural
+					soundscapes, harmonic and atonal sounds, and rhythmic drones.
+				</Text>
+				<Text>
+					Meld’s Macro Oscillators provides simple access of complex waveforms made by various synthesis methods. Quickly dial up subtractive, FM, granular, and other sources, quantize the oscillators to a
+					scale and even use the LFOs from one oscillator to modulate the other.
+				</Text>
+			</TextWrapper>
+
+			<div class="mx-auto lg:w-max">
+				<Image src={image4} alt={"ableton music"} class={"rounded-md"} />
+				<p class="font-semibold text-sm mt-3 text-black/80">Program Meld’s dual oscillators with dedicated LFOs and an extensive modulation matrix</p>
+			</div>
+			<div class="mx-auto lg:w-max">
+				<Image src={image5} alt={"ableton music"} class={"rounded-md"} />
+				<p class="font-semibold text-sm mt-3 text-black/80">Each of Meld’s oscillator presets comes with two Engines parameters, carefully chosen for maximum sound design versatility</p>
+			</div>
+		</div>
+
+		<div class="space-y-14">
+			<TextWrapper>
+				<BoldText> Add color with Roar </BoldText>
+				<Text>
+					Bathe your sound in subtle warmth – or break it down with wild distortion. Live’s new coloring and saturation device is made up of three saturation stages for serial, parallel or even mid/side
+					and multiband configurations. Its built-in compressor and feedback routing give you even more ways to shape your sound, and its modulation section lets you add dynamic, evolving saturation and
+					color.
+				</Text>
+			</TextWrapper>
+
+			<div class="mx-auto lg:w-max">
+				<Image src={image6} alt={"ableton music"} class={"rounded-md"} />
+				<p class="font-semibold text-sm mt-3 text-black/80">Apply heavy distortion to a specific frequency range with Roar’s multiband configuration</p>
+			</div>
+			<div class="mx-auto lg:w-max">
+				<Image src={image6} alt={"ableton music"} class={"rounded-md"} />
+				<p class="font-semibold text-sm mt-3 text-black/80">Modulate your sound with Roar’s Envelope Follower</p>
+			</div>
+		</div>
+
+		<button class="py-4 w-full text-cus_blue outline outline-cus_blue outline-2 font-semibold hover:bg-cus_blue hover:text-white rounded-md duration-200 mt-20">Discover more Roar sounds</button>
+	</Container>
+</MainContentLayout>

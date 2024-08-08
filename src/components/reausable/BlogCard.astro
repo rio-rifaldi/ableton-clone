@@ -1,0 +1,34 @@
+---
+import {Image} from "astro:assets";
+
+interface Props {
+	imageUrl: string;
+	imageAlt: string;
+	postUrl: string;
+	title: string;
+	summary?: string;
+	badge?: string[];
+}
+
+const {imageUrl, imageAlt, postUrl, title, summary, badge} = Astro.props;
+---
+
+<div class="rounded-md overflow-hidden shadow">
+	<Image src={imageUrl} alt={imageAlt} inferSize quality={1} format="webp" class={"h-[15rem] object-cover"} loading={"lazy"} />
+
+	<div class="p-4 space-y-3">
+		{
+			badge?.length !== 0 && (
+				<div>
+					{badge?.map((item) => {
+						<a href="#" class="px-2 py-[.35rem] rounded bg-purple-500 text-white w-max text-sm">
+							{item}
+						</a>;
+					})}
+				</div>
+			)
+		}
+		<a href={postUrl} class="font-semibold text-xl">{title}</a>
+		<p class="line-clamp-4">{summary}</p>
+	</div>
+</div>

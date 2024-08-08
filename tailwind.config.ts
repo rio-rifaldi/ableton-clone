@@ -21,6 +21,7 @@ const config = {
 				cus_purple: "#d5b3ff",
 				cus_green: "#b6ffc0",
 				cus_blue: "#0000ff",
+				cus_avocado: "#ebf0dc",
 				border: "hsl(var(--border))",
 				input: "hsl(var(--input))",
 				ring: "hsl(var(--ring))",

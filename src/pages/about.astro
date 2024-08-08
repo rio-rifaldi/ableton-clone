@@ -1,0 +1,122 @@
+---
+import {Image} from "astro:assets";
+import BoldText from "@/components/reausable/BoldText.astro";
+import Text from "@/components/reausable/Text.astro";
+import TextWrapper from "@/components/reausable/TextWrapper.astro";
+import {image1, image2, image3, image4, image5, image6, image7, image8, image9, peopleWorking, thumbnail1} from "@/asset/about/Entry";
+import {YouTube} from "astro-embed";
+import MainContentLayout from "@/layouts/MainContentLayout.astro";
+---
+
+<MainContentLayout>
+	<section>
+		<div class="relative">
+			<p class="absolute left-0 right-0 m-auto text-3xl font-bold text-red-500 capitalize md:text-6xl lg:text-8xl w-fit top-1/3">ableton</p>
+			<Image src={peopleWorking} alt={"peopleWorking"} class={"rounded-md h-[50rem] sm:h-[60rem] object-cover md:object-cover "} quality={5} width={0} height={0} />
+		</div>
+
+		<TextWrapper>
+			<BoldText>
+				We make <a href="#" class="text-cus_blue">Live,</a>
+				<a href="#" class="text-cus_blue">Push,</a>
+				<a href="#" class="text-cus_blue">Note</a> and <a href="#" class="text-cus_blue">Link</a> — unique software and hardware for music creation and performance. With these products, our community of users
+				creates amazing things.
+			</BoldText>
+			<Text>
+				Ableton was founded in 1999 and released the first version of Live in 2001. Our products are used by a community of dedicated musicians, sound designers, and artists from across the world.
+			</Text>
+		</TextWrapper>
+
+		<div class="relative flex flex-wrap items-center justify-center w-full overflow-auto scale-110 -translate-x-3 md:scale-100 md:-translate-x-0">
+			<div class="w-[25%] lg:w-[40%] min-h-inherit"></div>
+			<div class="w-[75%] lg:w-[60%] h-[60vw] xl:h-[49rem] bg-cus_yellow min-h-inherit rounded-md"></div>
+			<div class="absolute w-[85%]">
+				<figure class="flex items-center justify-between gap-7">
+					<Image src={image1} alt={"music image"} class={"w-[60%] lg:w-[52%] rounded-md"} quality={10} />
+					<Image src={image2} alt={"person image"} class="w-[35%] rounded-md" quality={10} />
+				</figure>
+			</div>
+		</div>
+
+		<TextWrapper>
+			<BoldText> Making music isn’t easy. It takes time, effort, and learning. But when you’re in the flow, it’s incredibly rewarding. </BoldText>
+			<Text> We feel the same way about making Ableton products. The driving force behind Ableton is our passion for what we make, and the people we make it for. </Text>
+		</TextWrapper>
+
+		<YouTube
+			id="https://www.youtube.com/embed/9SbnhgjeyXA?si=CuUl0mYKaLgyVRLT"
+			class="w-full sm:w-[80%] rounded-md max-w-screen-lg mx-auto h-[50vw] xl:h-[40rem]"
+			poster={thumbnail1.src}
+			posterQuality="low"
+		/>
+		<p class="my-6 text-center">Why Ableton - Juanpe Bolivar</p>
+		<TextWrapper>
+			<BoldText> We are more than 350 people from 30 different countries divided between our headquarters in Berlin and our offices in Los Angeles and Tokyo. </BoldText>
+			<Text>
+				Most of us are active musicians, producers, and DJs, and many of us use Live and Push every day. We come from a wide range of cultural and professional backgrounds. Some of us have PhDs, some are
+				self-taught, and most of us are somewhere in between. What connects us is the shared belief that each of us has the skills and knowledge to contribute to something big: helping to shape the future
+				of music culture.
+			</Text>
+		</TextWrapper>
+
+		<div class="flex items-center justify-center rounded-md">
+			<div class="w-[60%] bg-cus_green min-h-inherit h-[70vw] lg:h-[60rem] rounded-md"></div>
+			<div class="w-[40%] min-h-inherit"></div>
+			<div class="absolute grid items-center grid-cols-2 w-[80%] sm:w-[85%%] lg:max-w-6xl gap-9 md:gap-12">
+				<Image src={image3} alt={"man teaching"} quality={5} format="webp" class={"rounded-md"} />
+				<Image src={image5} alt={"man and woman disscused in studio music"} quality={5} format="webp" class={"row-span-2 rounded-md"} />
+				<Image src={image4} alt={"Ableton branding logo"} quality={5} format="webp" class={"rounded-md"} />
+			</div>
+		</div>
+
+		<TextWrapper>
+			<BoldText> We believe it takes focus to create truly outstanding instruments. We only work on a few products and we strive to make them great. </BoldText>
+			<Text>
+				Rather than having a one-size-fits-all process, we try to give our people what they need to work their magic and grow. We’ve learned that achieving the best results comes from building teams that
+				are richly diverse, and thus able to explore problems from a wider set of perspectives. We don’t always agree with each other, but opinion and debate are valued and openly encouraged.
+			</Text>
+		</TextWrapper>
+
+		<Image src={image6} alt={"composing music"} quality={5} format="webp" class={"rounded-md my-16 max-w-5xl mx-auto w-full"} />
+
+		<TextWrapper>
+			<BoldText> We’re passionate about what we do, but we’re equally passionate about improving who we are.</BoldText>
+			<Text> We work hard to foster an environment where people can grow both personally and professionally, and we strive to create a wealth of opportunities to learn from and with each other. </Text>
+			<Text>
+				Alongside an internal training program, employees are actively supported in acquiring new knowledge and skills, and coached on applying these in their daily work. In addition, staff-organized
+				development and music salons are a chance to discuss new technologies, production techniques and best practices.
+			</Text>
+		</TextWrapper>
+
+		<div class="relative 2xl:scale-90">
+			<div class="bg-cus_purple rounded-md w-[70%] mx-auto h-[58vw] 2xl:h-[38vw]"></div>
+			<div class="absolute grid items-center grid-cols-2 top-[15%] justify-between gap-[10%]">
+				<Image src={image7} alt={"people learning"} class="rounded-md" quality={5} format="webp" />
+				<Image src={image8} alt={"people learning on class"} class="rounded-md" quality={5} format="webp" />
+			</div>
+		</div>
+
+		<TextWrapper>
+			<BoldText
+				>We want our employees to love it here. Since we’re looking for exceptional talent from around the world, we will do everything we can to make your transition as easy as possible.</BoldText
+			>
+			<Text>
+				If you're joining us in Berlin, we'll help with relocation and paperwork. We’ll even provide you with free German or English lessons. Plus, working in Germany means you can expect comprehensive
+				health insurance for you and your family, as well as generous maternity and paternity leave. Office hours are flexible, but it’s not all work; we have several company and team outings throughout
+				the year as well as a variety of fun, informal small-group activities.</Text
+			>
+		</TextWrapper>
+
+		<div class="flex flex-col items-center rounded-md lg:flex-row lg:mx-auto lg:w-[80%]">
+			<Image src={image9} alt={"ableton jobs"} class="lg:w-1/2 w-full lg:h-[23vw] object-cover object-right" quality={5} format="webp" />
+			<div class="grid lg:w-1/2 w-full lg:place-content-center bg-cus_violet lg:h-[23vw] p-10">
+				<div class="space-y-6 md:text-xl lg:text-2xl">
+					<p>We’re really proud of the work we’ve done so far. But there’s so much more to come. If you’d like to be a part of it, please join us.</p>
+					<p class="text-cus_blue hover:text-cus_blue/35">
+						<a href="#">see latest jobs ↗️</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+</MainContentLayout>

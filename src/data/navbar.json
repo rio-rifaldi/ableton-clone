@@ -2,31 +2,271 @@
 	"nav": [
 		{
 			"title": "live",
-			"href": "#"
+			"href": "/live",
+			"childLink": [
+				{
+					"title": "Live 12",
+					"href": "#"
+				},
+				{
+					"title": "All new features",
+					"href": "#"
+				},
+				{
+					"title": "What is Live?",
+					"href": "#"
+				},
+				{
+					"title": "Max for Live",
+					"href": "#"
+				},
+				{
+					"title": "Learn Live",
+					"href": "#"
+				},
+				{
+					"title": "Integrated hardware",
+					"href": "#"
+				},
+				{
+					"title": "Compare editions",
+					"href": "#"
+				},
+				{
+					"title": "Buy now",
+					"href": "#"
+				}
+			]
 		},
 		{
 			"title": "push",
-			"href": "#"
+			"href": "/push",
+			"childLink": [
+				{
+					"title": "Overview",
+					"href": "#"
+				},
+				{
+					"title": "Tech specs",
+					"href": "#"
+				},
+				{
+					"title": "Learn Push",
+					"href": "#"
+				},
+				{
+					"title": "Upgrade Kit",
+					"href": "#"
+				},
+				{
+					"title": "Buy now",
+					"href": "#"
+				}
+			]
 		},
 		{
 			"title": "note",
-			"href": "#"
+			"href": "/note",
+			"childLink": []
 		},
 		{
 			"title": "link",
-			"href": "#"
+			"href": "/link",
+			"childLink": [
+				{
+					"title": "What is Link?",
+					"href": "#"
+				},
+				{
+					"title": "Link-enabled products",
+					"href": "#"
+				}
+			]
 		},
 		{
 			"title": "shop",
-			"href": "#"
+			"href": "/shop",
+			"childLink": [
+				{
+					"title": "Overview",
+					"href": "#"
+				},
+				{
+					"title": "Live",
+					"href": "#"
+				},
+				{
+					"title": "Push",
+					"href": "#"
+				},
+				{
+					"title": "Educational offers",
+					"href": "#"
+				},
+				{
+					"title": "Max for Live",
+					"href": "#"
+				},
+				{
+					"title": "Making Music",
+					"href": "#"
+				},
+				{
+					"title": "Merchandise",
+					"href": "#"
+				}
+			]
 		},
 		{
 			"title": "pack",
-			"href": "#"
+			"href": "/pack",
+			"childLink": []
 		},
 		{
 			"title": "help",
-			"href": "#"
+			"href": "/help",
+			"childLink": [
+				{
+					"title": "Overview",
+					"href": "#"
+				},
+				{
+					"title": "Learn Live",
+					"href": "#"
+				},
+				{
+					"title": "Learn Push",
+					"href": "#"
+				}
+			]
+		},
+		{
+			"title": "Blog",
+			"href": "#",
+			"childLink": [
+				{
+					"title": "All posts",
+					"href": "#"
+				},
+				{
+					"title": "Artists",
+					"href": "#"
+				},
+				{
+					"title": "News",
+					"href": "#"
+				},
+				{
+					"title": "Downloads",
+					"href": "#"
+				},
+				{
+					"title": "Tutorials",
+					"href": "#"
+				},
+				{
+					"title": "Videos",
+					"href": "#"
+				},
+				{
+					"title": "Loop",
+					"href": "#"
+				},
+				{
+					"title": "One Thing",
+					"href": "#"
+				},
+				{
+					"title": "Podcasts",
+					"href": "#"
+				}
+			]
+		},
+		{
+			"title": "ableton for the classroom",
+			"href": "#",
+			"childLink": [
+				{
+					"title": "Ableton for the Classroom",
+					"href": "#"
+				},
+				{
+					"title": "Why teach with Live & Push?",
+					"href": "#"
+				},
+				{
+					"title": "Offers for schools",
+					"href": "#"
+				},
+				{
+					"title": "Educator and IT resources",
+					"href": "#"
+				}
+			]
+		},
+		{
+			"title": "ableton for colleges and university",
+			"href": "#",
+			"childLink": []
+		},
+		{
+			"title": "certified training",
+			"href": "#",
+			"childLink": []
+		},
+		{
+			"title": "about",
+			"href": "/about",
+			"childLink": [
+				{
+					"href": "/about",
+					"title": "about"
+				},
+				{
+					"href": "/jobs",
+					"title": "jobs"
+				},
+				{
+					"href": "/apprenticeships",
+					"title": "apprenticeships"
+				}
+			]
+		},
+		{
+			"title": "jobs",
+			"href": "/jobs",
+			"childLink": [
+				{
+					"href": "/about",
+					"title": "about"
+				},
+				{
+					"href": "/jobs",
+					"title": "jobs"
+				},
+				{
+					"href": "/apprenticeships",
+					"title": "apprenticeships"
+				}
+			]
+		},
+		{
+			"title": "apprenticeships",
+			"href": "/apprenticeships",
+			"childLink": [
+				{
+					"href": "/about",
+					"title": "about"
+				},
+				{
+					"href": "/jobs",
+					"title": "jobs"
+				},
+				{
+					"href": "/apprenticeships",
+					"title": "apprenticeships"
+				}
+			]
 		}
 	],
 	"more": [
@@ -69,29 +309,29 @@
 			"title": "certified training"
 		},
 		{
-			"href": "#",
+			"href": "/about",
 			"title": "about ableton",
 			"additionalLink": [
 				{
-					"href": "#",
+					"href": "/about",
 					"title": "about"
 				},
 				{
-					"href": "#",
+					"href": "/jobs",
 					"title": "jobs"
 				},
 				{
-					"href": "#",
+					"href": "/apprenticeships",
 					"title": "apprenticeships"
 				}
 			]
 		},
 		{
-			"href": "#",
+			"href": "/jobs",
 			"title": "jobs"
 		},
 		{
-			"href": "#",
+			"href": "/apprenticeships",
 			"title": "apprenticeships"
 		}
 	]

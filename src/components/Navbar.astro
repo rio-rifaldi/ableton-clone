@@ -1,0 +1,141 @@
+---
+import {help, link, live, note, pack, profile, push, shop} from "@/asset/navigation/Entry";
+import NavbarContent from "@/data/navbar.json";
+import {Image} from "astro:assets";
+import NavbarWrapper from "./NavbarWrapper";
+import ListItem from "./reausable/ListItem.astro";
+
+const sidebarImageLink = [live, push, note, link, shop, pack, help];
+let currentPath = Astro.url.pathname.substring(1);
+let navbarLargeScreen: {title: string; href: string; childLink?: {title: string; href: string}[]}[] = [];
+let sidebarContent: {title: string; href: string; childLink?: {title: string; href: string}[]}[] = [];
+let childrenNav: {title?: string; href?: string; childLink?: {title: string; href: string}[]} = {};
+
+NavbarContent.nav.forEach((_, index) => {
+	if (index <= 6) {
+		navbarLargeScreen.push(NavbarContent.nav[index]);
+	} else {
+		sidebarContent.push(NavbarContent.nav[index]);
+	}
+	if (NavbarContent.nav[index].title == currentPath) {
+		childrenNav = NavbarContent.nav[index];
+	}
+});
+---
+
+{/*//@ts-ignore*/}
+<NavbarWrapper client:visible>
+	<!-- profile image large screen -->
+	<Image src={profile} alt="profile image" class="hidden size-14 md:inline" slot="profileLargeScreen" quality={10} />
+
+	<!-- large screen navigation bar list-->
+	<Fragment slot={"largeScreenNavbar"}>
+		{
+			navbarLargeScreen.map((item) => (
+				<li>
+					<a href={item.href} class:list={["transition hover:underline-offset-4 hover:text-cus_blue", {"text-cus_blue underline": currentPath === item.title}]}>
+						{item.title}
+					</a>
+				</li>
+			))
+		}
+	</Fragment>
+
+	<!-- narbar menu dropdown -->
+	<ul class="grid w-[600px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]" slot="navbarMenuDropdown">
+		{
+			NavbarContent.more.map((item) => {
+				return <ListItem href={item.href} description={item.description} title={item.title} descriptionStyle="line-clamp-2" />;
+			})
+		}
+		{
+			sidebarContent.map((item) => (
+				<ul class=" mt-6">
+					<a href={item.href} class:list={["inline-block py-1 hover:text-cus_blue hover:underline hover:underline-offset-4", {"text-cus_blue underline": currentPath === item.title}]}>
+						{item.title}
+					</a>
+				</ul>
+			))
+		}
+	</ul>
+
+	<!-- sidebar profile account + username  -->
+	<div class="text-center" slot="profileAccount">
+		<Image src={profile} alt="profile image" class="mx-auto size-24" quality={5} />
+		<p class="mt-2 text-lg font-bold capitalize">rio rifaldi</p>
+		<p class="font-light">riorifaldi44@gmail.com</p>
+	</div>
+
+	<!-- sidebar navigation content + icon -->
+	<ul class="mt-9" slot="sidebarList">
+		{
+			navbarLargeScreen.map((item, index) => (
+				<li>
+					<a href={item.href} class="flex items-center gap-2 py-3 text-lg font-medium group ">
+						<Image src={sidebarImageLink[index]} alt={`${item.title} icon`} class="inline-block mr-2 size-8 brightness-95 group-hover:brightness-105" quality={5} />
+						<p class="transition group-hover:underline-offset-4 group-hover:underline group-hover:text-cus_blue">{item.title}</p>
+					</a>
+				</li>
+			))
+		}
+	</ul>
+
+	<!-- accordion sidebar content one -->
+
+	<ul class="capitalize" slot="accordionContentOne">
+		{
+			sidebarContent.map((item) => (
+				<li>
+					<a href={item.href} class="inline-block py-1 hover:text-cus_blue hover:underline hover:underline-offset-4">
+						{item.title}
+					</a>
+				</li>
+			))
+		}
+	</ul>
+
+	<!-- accordion sidebar content two -->
+	<ul class="space-y-2" slot="accordionContentTwo">
+		{
+			NavbarContent.more.map((item) => (
+				<li>
+					<a href={item.href} class="hover:text-cus_blue hover:underline hover:underline-offset-4 group">
+						<p class="font-medium">{item.title}</p>
+						<p class="mt-1 text-black/70 group-hover:text-cus_blue">{item.description}</p>
+					</a>
+				</li>
+			))
+		}
+	</ul>
+
+	<!-- children navigation bar -->
+	{
+		childrenNav.childLink?.length !== 0 && Object.keys(childrenNav).length !== 0 && (
+			<div class=" sticky top-0 z-10 bg-white md:max-w-screen-2xl md:mx-auto backdrop-opacity-25 bg-opacity-90 transition  " id="sticky-nav">
+				<ul class="flex gap-8 items-center justify-start py-5 px-9 overflow-x-auto ">
+					{childrenNav.childLink?.map((item) => (
+						<li class="flex-none">
+							<a href={item.href} class:list={["hover:text-cus_blue hover:underline hover:underline-offset-4 capitalize text-sm", {"text-cus_blue underline": currentPath === item.title}]}>
+								{item.title}
+							</a>
+						</li>
+					))}
+				</ul>
+			</div>
+		)
+	}
+</NavbarWrapper>
+
+<script>
+	let lastScrollY = 0;
+	const stikcyNav = document.querySelector("#sticky-nav");
+	document.addEventListener("scroll", () => {
+		let currentScrollY = window.scrollY;
+		if (currentScrollY > lastScrollY) {
+			stikcyNav?.classList.remove("stikcy", "z-10", "top-0");
+		} else {
+			stikcyNav?.classList.add("stikcy", "z-10", "top-0");
+		}
+		lastScrollY = currentScrollY;
+	});
+</script>
