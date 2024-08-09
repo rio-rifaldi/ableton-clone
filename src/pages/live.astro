@@ -1,5 +1,5 @@
 ---
-import {header, image1, image2, image3, image4, image5, image6, thumbnail1, thumbnail2, thumbnail3, thumbnail4, thumbnail5} from "@/asset/live/Entry";
+import {header, image1, image2, image3, image4, image5, image6} from "@/asset/live/Entry";
 import Container from "@/components/Container.astro";
 import BoldText from "@/components/reausable/BoldText.astro";
 import Text from "@/components/reausable/Text.astro";
@@ -21,14 +21,14 @@ import {Image} from "astro:assets";
 				>
 			</button>
 		</div>
-		<Image src={header} alt={"image hero"} class={"mx-auto w-full max-w-screen-2xl h-[70vh] object-cover "} format="webp" quality={"mid"} />
+		<Image src={header} alt={"image hero"} class={"mx-auto w-full max-w-screen-2xl h-[70vh] object-cover "} format="webp" quality={10} />
 	</div>
 
 	<Container>
 		<section class="my-20 max-w-screen-xl mx-auto space-y-9">
 			<BoldText className="lg:text-4xl"> Whatever music you make, and whoever you are as a music maker, there’s always more to explore in Live. See how you can go further with Live 12. </BoldText>
 
-			<YouTube poster={thumbnail1.src} posterQuality="low" id="https://youtu.be/QFCV6EkqRQs" title={"A look at some of the highlights of Live 12"} class={"mx-auto w-full max-w-screen-xl rounded-md "} />
+			<YouTube posterQuality="high" id="https://youtu.be/QFCV6EkqRQs" title={"A look at some of the highlights of Live 12"} class={"mx-auto w-full max-w-screen-xl rounded-md "} />
 
 			<BoldText className="lg:text-4xl"> Find out what’s possible in Live 12 </BoldText>
 
@@ -45,7 +45,7 @@ import {Image} from "astro:assets";
 	<Container className="bg-cus_avocado md:py-24 lg:px-32 space-y-14 md:space-y-32  ">
 		<BoldText className="lg:text-5xl"> Play freely with ideas Play video</BoldText>
 
-		<YouTube poster={thumbnail2.src} posterQuality="low" id="https://youtu.be/z7kjcMvMr3M" title={"A demonstration of the new MIDI Tools"} class={"mx-auto w-full max-w-screen-xl rounded-md "} />
+		<YouTube posterQuality="high" id="https://youtu.be/z7kjcMvMr3M" title={"A demonstration of the new MIDI Tools"} class={"mx-auto w-full max-w-screen-xl rounded-md "} />
 
 		<div class="space-y-7 md:flex md:space-y-0 gap-20 items-center">
 			<div class="space-y-3">
@@ -74,7 +74,7 @@ import {Image} from "astro:assets";
 		</div>
 
 		<div class="space-y-5 md:flex md:space-y-0 md:items-center md:justify-between md:flex-row-reverse md:gap-20">
-			<YouTube poster={thumbnail3.src} id="https://youtu.be/5-ZldZ5WhSM" posterQuality="low" class={"md:w-[70%] rounded-md"} title={"See how to work with tuning systems in Live"} />
+			<YouTube id="https://youtu.be/5-ZldZ5WhSM" posterQuality="high" class={"md:w-[70%] rounded-md"} title={"See how to work with tuning systems in Live"} />
 
 			<div class="md:space-y-3 md:w-[25%]">
 				<BoldText> Embrace and explore tunings </BoldText>
@@ -85,7 +85,7 @@ import {Image} from "astro:assets";
 			</div>
 		</div>
 		<div class="space-y-5 md:flex md:space-y-0 md:items-center md:justify-between md:gap-20">
-			<YouTube poster={thumbnail4.src} id="https://youtu.be/u6IpJYpN48A" posterQuality="low" class={"md:w-[60%] rounded-md"} title={"A quick look at the new Keys and Scales feature"} />
+			<YouTube id="https://youtu.be/u6IpJYpN48A" posterQuality="high" class={"md:w-[60%] rounded-md"} title={"A quick look at the new Keys and Scales feature"} />
 
 			<div class="md:space-y-3 md:w-[40%]">
 				<BoldText> Stay in key </BoldText>
@@ -121,7 +121,7 @@ import {Image} from "astro:assets";
 		<BoldText className={"md:text-5xl lg:text-6xl"}> Surprise yourself with the sounds you create </BoldText>
 
 		<div class="space-y-5 md:flex md:space-y-0 md:items-center md:justify-between md:flex-row-reverse md:gap-20 mt-14 lg:mt-24">
-			<YouTube poster={thumbnail5.src} id="https://youtu.be/ncdNTdzBK4Y" posterQuality="low" class={"md:w-[60%] rounded-md"} title={"Take a look at the new devices in Live 12"} />
+			<YouTube id="https://youtu.be/ncdNTdzBK4Y" posterQuality="high" class={"md:w-[60%] rounded-md"} title={"Take a look at the new devices in Live 12"} />
 
 			<div class="md:space-y-3 md:w-[40%]">
 				<BoldText> Find inspirations </BoldText>

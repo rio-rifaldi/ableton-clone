@@ -12,10 +12,5 @@ import image10 from "./image10.png";
 import image11 from "./image11.png";
 import image12 from "./image12.png";
 import image13 from "./image13.png";
-import thumbnail1 from "./thumbnail1.png";
-import thumbnail2 from "./thumbnail2.png";
-import thumbnail3 from "./thumbnail3.png";
-import thumbnail4 from "./thumbnail4.png";
-import thumbnail5 from "./thumbnail5.png";
 
-export {header, image1, image2, image3, image4, image5, image6, image7, image8, image9, image10, image11, image12, image13, thumbnail1, thumbnail2, thumbnail3, thumbnail4, thumbnail5};
+export {header, image1, image2, image3, image4, image5, image6, image7, image8, image9, image10, image11, image12, image13};
